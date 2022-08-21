@@ -32,7 +32,7 @@ void loop()
     lifter.write(110);
     entry = Serial.readString(); 
     int cy = entry.toInt();
-    int moveangle = map(cy, 0, 480, 0, 180);
+    int moveangle = cy + (cy*0.333);
     delay(2000);
     xRot.write(moveangle);
     grablift();
